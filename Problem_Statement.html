@@ -1,0 +1,3204 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1 -->
+<html lang="en-US">
+<link type="text/css" id="dark-mode" rel="stylesheet"
+  href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel="stylesheet" href="./Mini Project 1 _ Operating Systems and Networks_files/just-the-docs-default.css">
+  <script src="./Mini Project 1 _ Operating Systems and Networks_files/lunr.min.js"></script>
+  <script src="./Mini Project 1 _ Operating Systems and Networks_files/just-the-docs.js"></script>
+  <script type="text/javascript" async=""
+    src="./Mini Project 1 _ Operating Systems and Networks_files/latest.js"> </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://karthikv1392.github.io/cs3301_osn/assets/images/favicon.png" type="image/png">
+  <title>Mini Project 1 | Operating Systems and Networks</title>
+  <meta name="generator" content="Jekyll v3.9.3">
+  <meta property="og:title" content="Mini Project 1">
+  <meta name="author" content="Karthik Vaidhyanathann">
+  <meta property="og:locale" content="en_US">
+  <meta name="description" content="This is the website of the course offered by IIIT Hyderabad">
+  <meta property="og:description" content="This is the website of the course offered by IIIT Hyderabad">
+  <link rel="canonical" href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1">
+  <meta property="og:url" content="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1">
+  <meta property="og:site_name" content="Operating Systems and Networks">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:title" content="Mini Project 1">
+  <script
+    type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Karthik Vaidhyanathann"},"description":"This is the website of the course offered by IIIT Hyderabad","headline":"Mini Project 1","url":"https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1"}</script>
+  <script type="text/javascript" async=""
+    src="./Mini Project 1 _ Operating Systems and Networks_files/MathJax.js"></script>
+  <style type="text/css">
+    .MathJax_Hover_Frame {
+      border-radius: .25em;
+      -webkit-border-radius: .25em;
+      -moz-border-radius: .25em;
+      -khtml-border-radius: .25em;
+      box-shadow: 0px 0px 15px #83A;
+      -webkit-box-shadow: 0px 0px 15px #83A;
+      -moz-box-shadow: 0px 0px 15px #83A;
+      -khtml-box-shadow: 0px 0px 15px #83A;
+      border: 1px solid #A6D ! important;
+      display: inline-block;
+      position: absolute
+    }
+
+    .MathJax_Menu_Button .MathJax_Hover_Arrow {
+      position: absolute;
+      cursor: pointer;
+      display: inline-block;
+      border: 2px solid #AAA;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      font-family: 'Courier New', Courier;
+      font-size: 9px;
+      color: #F0F0F0
+    }
+
+    .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+      display: block;
+      background-color: #AAA;
+      border: 1px solid;
+      border-radius: 3px;
+      line-height: 0;
+      padding: 4px
+    }
+
+    .MathJax_Hover_Arrow:hover {
+      color: white !important;
+      border: 2px solid #CCC !important
+    }
+
+    .MathJax_Hover_Arrow:hover span {
+      background-color: #CCC !important
+    }
+  </style>
+  <style type="text/css">
+    #MathJax_About {
+      position: fixed;
+      left: 50%;
+      width: auto;
+      text-align: center;
+      border: 3px outset;
+      padding: 1em 2em;
+      background-color: #DDDDDD;
+      color: black;
+      cursor: default;
+      font-family: message-box;
+      font-size: 120%;
+      font-style: normal;
+      text-indent: 0;
+      text-transform: none;
+      line-height: normal;
+      letter-spacing: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      z-index: 201;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -khtml-border-radius: 15px;
+      box-shadow: 0px 10px 20px #808080;
+      -webkit-box-shadow: 0px 10px 20px #808080;
+      -moz-box-shadow: 0px 10px 20px #808080;
+      -khtml-box-shadow: 0px 10px 20px #808080;
+      filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_About.MathJax_MousePost {
+      outline: none
+    }
+
+    .MathJax_Menu {
+      position: absolute;
+      background-color: white;
+      color: black;
+      width: auto;
+      padding: 5px 0px;
+      border: 1px solid #CCCCCC;
+      margin: 0;
+      cursor: default;
+      font: menu;
+      text-align: left;
+      text-indent: 0;
+      text-transform: none;
+      line-height: normal;
+      letter-spacing: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      z-index: 201;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      box-shadow: 0px 10px 20px #808080;
+      -webkit-box-shadow: 0px 10px 20px #808080;
+      -moz-box-shadow: 0px 10px 20px #808080;
+      -khtml-box-shadow: 0px 10px 20px #808080;
+      filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    .MathJax_MenuItem {
+      padding: 1px 2em;
+      background: transparent
+    }
+
+    .MathJax_MenuArrow {
+      position: absolute;
+      right: .5em;
+      padding-top: .25em;
+      color: #666666;
+      font-size: .75em
+    }
+
+    .MathJax_MenuActive .MathJax_MenuArrow {
+      color: white
+    }
+
+    .MathJax_MenuArrow.RTL {
+      left: .5em;
+      right: auto
+    }
+
+    .MathJax_MenuCheck {
+      position: absolute;
+      left: .7em
+    }
+
+    .MathJax_MenuCheck.RTL {
+      right: .7em;
+      left: auto
+    }
+
+    .MathJax_MenuRadioCheck {
+      position: absolute;
+      left: .7em
+    }
+
+    .MathJax_MenuRadioCheck.RTL {
+      right: .7em;
+      left: auto
+    }
+
+    .MathJax_MenuLabel {
+      padding: 1px 2em 3px 1.33em;
+      font-style: italic
+    }
+
+    .MathJax_MenuRule {
+      border-top: 1px solid #DDDDDD;
+      margin: 4px 3px
+    }
+
+    .MathJax_MenuDisabled {
+      color: GrayText
+    }
+
+    .MathJax_MenuActive {
+      background-color: #606872;
+      color: white
+    }
+
+    .MathJax_MenuDisabled:focus,
+    .MathJax_MenuLabel:focus {
+      background-color: #E8E8E8
+    }
+
+    .MathJax_ContextMenu:focus {
+      outline: none
+    }
+
+    .MathJax_ContextMenu .MathJax_MenuItem:focus {
+      outline: none
+    }
+
+    #MathJax_AboutClose {
+      top: .2em;
+      right: .2em
+    }
+
+    .MathJax_Menu .MathJax_MenuClose {
+      top: -10px;
+      left: -10px
+    }
+
+    .MathJax_MenuClose {
+      position: absolute;
+      cursor: pointer;
+      display: inline-block;
+      border: 2px solid #AAA;
+      border-radius: 18px;
+      -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      -khtml-border-radius: 18px;
+      font-family: 'Courier New', Courier;
+      font-size: 24px;
+      color: #F0F0F0
+    }
+
+    .MathJax_MenuClose span {
+      display: block;
+      background-color: #AAA;
+      border: 1.5px solid;
+      border-radius: 18px;
+      -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      -khtml-border-radius: 18px;
+      line-height: 0;
+      padding: 8px 0 6px
+    }
+
+    .MathJax_MenuClose:hover {
+      color: white !important;
+      border: 2px solid #CCC !important
+    }
+
+    .MathJax_MenuClose:hover span {
+      background-color: #CCC !important
+    }
+
+    .MathJax_MenuClose:hover:focus {
+      outline: none
+    }
+  </style>
+  <style type="text/css">
+    .MathJax_Preview .MJXf-math {
+      color: inherit !important
+    }
+  </style>
+  <style type="text/css">
+    .MJX_Assistive_MathML {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 1px 0 0 0 !important;
+      border: 0 !important;
+      height: 1px !important;
+      width: 1px !important;
+      overflow: hidden !important;
+      display: block !important;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+
+    .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {
+      width: 100% !important
+    }
+  </style>
+  <style type="text/css">
+    #MathJax_Zoom {
+      position: absolute;
+      background-color: #F0F0F0;
+      overflow: auto;
+      display: block;
+      z-index: 301;
+      padding: .5em;
+      border: 1px solid black;
+      margin: 0;
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      text-indent: 0;
+      text-transform: none;
+      line-height: normal;
+      letter-spacing: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      box-shadow: 5px 5px 15px #AAAAAA;
+      -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+      -moz-box-shadow: 5px 5px 15px #AAAAAA;
+      -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+      filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_ZoomOverlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 300;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background-color: white;
+      opacity: 0;
+      filter: alpha(opacity=0)
+    }
+
+    #MathJax_ZoomFrame {
+      position: relative;
+      display: inline-block;
+      height: 0;
+      width: 0
+    }
+
+    #MathJax_ZoomEventTrap {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 302;
+      display: inline-block;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background-color: white;
+      opacity: 0;
+      filter: alpha(opacity=0)
+    }
+  </style>
+  <style type="text/css">
+    .MathJax_Preview {
+      color: #888
+    }
+
+    #MathJax_Message {
+      position: fixed;
+      left: 1em;
+      bottom: 1.5em;
+      background-color: #E6E6E6;
+      border: 1px solid #959595;
+      margin: 0px;
+      padding: 2px 8px;
+      z-index: 102;
+      color: black;
+      font-size: 80%;
+      width: auto;
+      white-space: nowrap
+    }
+
+    #MathJax_MSIE_Frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0px;
+      z-index: 101;
+      border: 0px;
+      margin: 0px;
+      padding: 0px
+    }
+
+    .MathJax_Error {
+      color: #CC0000;
+      font-style: italic
+    }
+  </style>
+  <style type="text/css">
+    .MJXp-script {
+      font-size: .8em
+    }
+
+    .MJXp-right {
+      -webkit-transform-origin: right;
+      -moz-transform-origin: right;
+      -ms-transform-origin: right;
+      -o-transform-origin: right;
+      transform-origin: right
+    }
+
+    .MJXp-bold {
+      font-weight: bold
+    }
+
+    .MJXp-italic {
+      font-style: italic
+    }
+
+    .MJXp-scr {
+      font-family: MathJax_Script, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-frak {
+      font-family: MathJax_Fraktur, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-sf {
+      font-family: MathJax_SansSerif, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-cal {
+      font-family: MathJax_Caligraphic, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-mono {
+      font-family: MathJax_Typewriter, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-largeop {
+      font-size: 150%
+    }
+
+    .MJXp-largeop.MJXp-int {
+      vertical-align: -.2em
+    }
+
+    .MJXp-math {
+      display: inline-block;
+      line-height: 1.2;
+      text-indent: 0;
+      font-family: 'Times New Roman', Times, STIXGeneral, serif;
+      white-space: nowrap;
+      border-collapse: collapse
+    }
+
+    .MJXp-display {
+      display: block;
+      text-align: center;
+      margin: 1em 0
+    }
+
+    .MJXp-math span {
+      display: inline-block
+    }
+
+    .MJXp-box {
+      display: block !important;
+      text-align: center
+    }
+
+    .MJXp-box:after {
+      content: " "
+    }
+
+    .MJXp-rule {
+      display: block !important;
+      margin-top: .1em
+    }
+
+    .MJXp-char {
+      display: block !important
+    }
+
+    .MJXp-mo {
+      margin: 0 .15em
+    }
+
+    .MJXp-mfrac {
+      margin: 0 .125em;
+      vertical-align: .25em
+    }
+
+    .MJXp-denom {
+      display: inline-table !important;
+      width: 100%
+    }
+
+    .MJXp-denom>* {
+      display: table-row !important
+    }
+
+    .MJXp-surd {
+      vertical-align: top
+    }
+
+    .MJXp-surd>* {
+      display: block !important
+    }
+
+    .MJXp-script-box>* {
+      display: table !important;
+      height: 50%
+    }
+
+    .MJXp-script-box>*>* {
+      display: table-cell !important;
+      vertical-align: top
+    }
+
+    .MJXp-script-box>*:last-child>* {
+      vertical-align: bottom
+    }
+
+    .MJXp-script-box>*>*>* {
+      display: block !important
+    }
+
+    .MJXp-mphantom {
+      visibility: hidden
+    }
+
+    .MJXp-munderover,
+    .MJXp-munder {
+      display: inline-table !important
+    }
+
+    .MJXp-over {
+      display: inline-block !important;
+      text-align: center
+    }
+
+    .MJXp-over>* {
+      display: block !important
+    }
+
+    .MJXp-munderover>*,
+    .MJXp-munder>* {
+      display: table-row !important
+    }
+
+    .MJXp-mtable {
+      vertical-align: .25em;
+      margin: 0 .125em
+    }
+
+    .MJXp-mtable>* {
+      display: inline-table !important;
+      vertical-align: middle
+    }
+
+    .MJXp-mtr {
+      display: table-row !important
+    }
+
+    .MJXp-mtd {
+      display: table-cell !important;
+      text-align: center;
+      padding: .5em 0 0 .5em
+    }
+
+    .MJXp-mtr>.MJXp-mtd:first-child {
+      padding-left: 0
+    }
+
+    .MJXp-mtr:first-child>.MJXp-mtd {
+      padding-top: 0
+    }
+
+    .MJXp-mlabeledtr {
+      display: table-row !important
+    }
+
+    .MJXp-mlabeledtr>.MJXp-mtd:first-child {
+      padding-left: 0
+    }
+
+    .MJXp-mlabeledtr:first-child>.MJXp-mtd {
+      padding-top: 0
+    }
+
+    .MJXp-merror {
+      background-color: #FFFF88;
+      color: #CC0000;
+      border: 1px solid #CC0000;
+      padding: 1px 3px;
+      font-style: normal;
+      font-size: 90%
+    }
+
+    .MJXp-scale0 {
+      -webkit-transform: scaleX(.0);
+      -moz-transform: scaleX(.0);
+      -ms-transform: scaleX(.0);
+      -o-transform: scaleX(.0);
+      transform: scaleX(.0)
+    }
+
+    .MJXp-scale1 {
+      -webkit-transform: scaleX(.1);
+      -moz-transform: scaleX(.1);
+      -ms-transform: scaleX(.1);
+      -o-transform: scaleX(.1);
+      transform: scaleX(.1)
+    }
+
+    .MJXp-scale2 {
+      -webkit-transform: scaleX(.2);
+      -moz-transform: scaleX(.2);
+      -ms-transform: scaleX(.2);
+      -o-transform: scaleX(.2);
+      transform: scaleX(.2)
+    }
+
+    .MJXp-scale3 {
+      -webkit-transform: scaleX(.3);
+      -moz-transform: scaleX(.3);
+      -ms-transform: scaleX(.3);
+      -o-transform: scaleX(.3);
+      transform: scaleX(.3)
+    }
+
+    .MJXp-scale4 {
+      -webkit-transform: scaleX(.4);
+      -moz-transform: scaleX(.4);
+      -ms-transform: scaleX(.4);
+      -o-transform: scaleX(.4);
+      transform: scaleX(.4)
+    }
+
+    .MJXp-scale5 {
+      -webkit-transform: scaleX(.5);
+      -moz-transform: scaleX(.5);
+      -ms-transform: scaleX(.5);
+      -o-transform: scaleX(.5);
+      transform: scaleX(.5)
+    }
+
+    .MJXp-scale6 {
+      -webkit-transform: scaleX(.6);
+      -moz-transform: scaleX(.6);
+      -ms-transform: scaleX(.6);
+      -o-transform: scaleX(.6);
+      transform: scaleX(.6)
+    }
+
+    .MJXp-scale7 {
+      -webkit-transform: scaleX(.7);
+      -moz-transform: scaleX(.7);
+      -ms-transform: scaleX(.7);
+      -o-transform: scaleX(.7);
+      transform: scaleX(.7)
+    }
+
+    .MJXp-scale8 {
+      -webkit-transform: scaleX(.8);
+      -moz-transform: scaleX(.8);
+      -ms-transform: scaleX(.8);
+      -o-transform: scaleX(.8);
+      transform: scaleX(.8)
+    }
+
+    .MJXp-scale9 {
+      -webkit-transform: scaleX(.9);
+      -moz-transform: scaleX(.9);
+      -ms-transform: scaleX(.9);
+      -o-transform: scaleX(.9);
+      transform: scaleX(.9)
+    }
+
+    .MathJax_PHTML .noError {
+      vertical-align: ;
+      font-size: 90%;
+      text-align: left;
+      color: black;
+      padding: 1px 3px;
+      border: 1px solid
+    }
+  </style>
+  <style type="text/css">
+    .clearly-login-pop {
+      user-select: none;
+      position: fixed;
+      right: 32px;
+      top: 32px;
+      width: 350px;
+      border-radius: 16px;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      z-index: 2147483648;
+      padding: 20px;
+    }
+
+    .clearly-login-pop-head {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .clearly-login-pop-head i {
+      cursor: pointer;
+    }
+
+    .clearly-login-pop-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .clearly-login-pop .tcell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .clearly-login-pop .tcell:first-child {
+      border-top: 0;
+    }
+
+    .clearly-login-pop .tcell .form-label {
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-start;
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .clearly-login-pop .tcell .form-label i {
+      margin-right: 10px;
+    }
+
+    .clearly-login-pop .tcell .form-label .value {
+      margin-left: 8px;
+      font-size: 10px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .clearly-login-pop .tcell .form-group {
+      margin-bottom: 0;
+    }
+
+    .clearly-login-pop .btn-group {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 12px;
+    }
+
+    .clearly-login-pop .btn-submit {
+      height: 52px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      text-decoration: none;
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #333;
+      font-size: 13px;
+      height: 34px;
+      padding: 0 10px;
+    }
+
+    .clearly-login-pop input.account-input {
+      border-radius: 6px;
+      font-size: 13px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      height: 34px;
+      padding: 0 12px;
+      appearance: none;
+      background: none;
+      outline: none;
+      color: rgba(0, 0, 0, 0.9);
+      min-width: 200px;
+    }
+  </style>
+  <style type="text/css">
+    #clearly-edit-pop {
+      background-color: rgba(0, 0, 0, 0.9);
+      border-radius: 8px;
+      padding: 5px 12px;
+      color: #fff;
+      font-size: 14px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      position: absolute;
+      z-index: 999999999;
+    }
+
+    #clearly-edit-pop .clearly-edit-pop-remove {
+      cursor: pointer;
+    }
+
+    #clearly-edit-pop:after {
+      content: '';
+      display: block;
+      border-style: solid;
+      border-width: 5px;
+      border-color: transparent;
+      border-top-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      margin-left: -5px;
+      bottom: -10px;
+      left: 50%;
+    }
+  </style>
+  <style type="text/css">
+    :root {
+      --color-yellow: #FFD76F;
+      --color-green: #34FFB6;
+      --color-black: rgba(0, 0, 0, 0.9);
+      --color-border: rgba(255, 255, 255, 0.1);
+      --color-icon: rgba(255, 255, 255, 0.6);
+      --color-icon-hover: rgba(255, 255, 255, 0.8);
+      --color-text-gray: rgba(255, 255, 255, 0.6);
+      --color-placeholder: rgba(255, 255, 255, 0.6);
+      --color-light-hover: rgba(255, 255, 255, 0.1);
+    }
+
+    .clearly-mark {
+      background-color: var(--color-yellow);
+      color: black;
+      cursor: pointer;
+    }
+
+    .clearly-image-collected {
+      border-left: 8px solid var(--color-yellow);
+    }
+
+    #clearly-image-popup-icon,
+    #clearly-popup-icon {
+      background: #1C1A1A;
+      position: absolute;
+      border-radius: 8px;
+      border: 1px solid #C1C1C1;
+      cursor: pointer;
+      z-index: 2147483648;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s linear;
+    }
+
+    #clearly-image-popup-icon:hover,
+    #clearly-popup-icon:hover {
+      background-color: #000;
+    }
+
+    #clearly-image-popup-icon .clearly-popup-icon-img,
+    #clearly-popup-icon .clearly-popup-icon-img {
+      width: 32px;
+      height: 32px;
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGrSURBVHgB7ZjRUcMwDIYVjgGyQbsBGSFswAbpJskGsEHYADbIMQHZIOkEhQmEfPZxIaRK5To2x+m700MTS9Xv2JZtAEVRFEVR/imImBuDDckgEC7RiqwgK8n2syY92Uj2SvaWZdno/A6Tth/0/Ali4nq5JjuhjJpsP3s2QExcAgOGQyzgFjyhPzNDpSPjxnjv7Oja3YEdYpvOi1Uu6PmOrGR8m1BfwFfAM5P8y4UxmiQCTM8yyQ+mhwWxuhQCOkZAK4xVRhWAv5e9OYUwpIl5ukaAdBXiEjRFqAc592BXpdHEACFSASXzzid58BT9zQ3I2DHvRkiAVEDaArSAVADHERIQUsAOEiAVIF4ltkYq4JN5J64BIZAK4Ja8PXjgimMl2YJ4YyrtSiUuQQj5HKaVGDc+gq7thTphrBx/bstF/l7Meuyqr0BtH2e+FcRg5SuYzVmx4p8vJB/vPIx24q0d4lu02+V84mN+12d84/T+RESB8puIczSQAgxzK9FAStCO58ZDyIAey+6mUEIPaA/870zSbcjEg10tLoF2Ahszp7U/t49SFEVRlOR8AQxUBgYyQX2vAAAAAElFTkSuQmCC');
+    }
+
+    #clearly-image-popup-icon .clearly-popup-text,
+    #clearly-popup-icon .clearly-popup-text {
+      padding: 0 10px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    #clearly-video-icon {
+      cursor: pointer;
+      background: #2C2828;
+      display: inline-block;
+      align-items: center;
+      margin: 0 8px;
+      border-radius: 18px;
+      height: 36px;
+      position: relative;
+      box-sizing: border-box;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.2s linear;
+    }
+
+    #clearly-video-icon:hover {
+      background-color: #000;
+    }
+
+    #clearly-video-icon .clearly-popup-icon-img {
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      margin-top: -12px;
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGrSURBVHgB7ZjRUcMwDIYVjgGyQbsBGSFswAbpJskGsEHYADbIMQHZIOkEhQmEfPZxIaRK5To2x+m700MTS9Xv2JZtAEVRFEVR/imImBuDDckgEC7RiqwgK8n2syY92Uj2SvaWZdno/A6Tth/0/Ali4nq5JjuhjJpsP3s2QExcAgOGQyzgFjyhPzNDpSPjxnjv7Oja3YEdYpvOi1Uu6PmOrGR8m1BfwFfAM5P8y4UxmiQCTM8yyQ+mhwWxuhQCOkZAK4xVRhWAv5e9OYUwpIl5ukaAdBXiEjRFqAc592BXpdHEACFSASXzzid58BT9zQ3I2DHvRkiAVEDaArSAVADHERIQUsAOEiAVIF4ltkYq4JN5J64BIZAK4Ja8PXjgimMl2YJ4YyrtSiUuQQj5HKaVGDc+gq7thTphrBx/bstF/l7Meuyqr0BtH2e+FcRg5SuYzVmx4p8vJB/vPIx24q0d4lu02+V84mN+12d84/T+RESB8puIczSQAgxzK9FAStCO58ZDyIAey+6mUEIPaA/870zSbcjEg10tLoF2Ahszp7U/t49SFEVRlOR8AQxUBgYyQX2vAAAAAElFTkSuQmCC');
+    }
+
+    #clearly-video-icon .clearly-popup-text {
+      padding-left: 32px;
+      padding-right: 12px;
+      font-family: sans-serif;
+      font-size: 14px;
+      line-height: 32px;
+      height: 32px;
+      color: #FFFFFF;
+    }
+  </style>
+  <style type="text/css">
+    .tag-pane {
+      position: absolute;
+      width: 160px;
+      border-radius: 16px;
+      top: 40px;
+      right: 0;
+      padding-bottom: 8px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+      z-index: 99999999;
+    }
+
+    .tag-pane .item {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+
+    .tag-pane .item:hover {
+      cursor: pointer;
+      background-color: var(--color-hover);
+    }
+
+    .tag-pane .tag-search-input-container {
+      padding: 16px;
+    }
+
+    .tag-pane .tag-search-input {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid var(--color-yellow);
+      padding-left: 12px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      width: 100%;
+      color: var(--color-text);
+      background-color: transparent;
+      outline: none;
+    }
+
+    .tag-pane .tag-search-input::placeholder {
+      color: var(--color-placeholder);
+    }
+
+    .tag-pane .icon-check,
+    .tag-pane .icon-add {
+      font-size: 18px;
+      margin-right: 6px;
+      color: var(--color-icon);
+    }
+
+    .tag-pane .icon-checked {
+      color: var(--color-yellow);
+    }
+  </style>
+  <style type="text/css">
+    .collect-pop {
+      position: fixed;
+      border: 1px solid var(--color-gray-border);
+      right: 32px;
+      top: 32px;
+      border-radius: 16px;
+      background-color: var(--color-black);
+      z-index: 2147483648;
+    }
+
+    .collect-pop .main {
+      height: 60px;
+      line-height: 60px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .collect-pop .save {
+      padding: 0 20px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .collect-pop .save .icon-success {
+      color: var(--color-green);
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .collect-pop .icon-tag {
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 24px;
+      margin-right: 20px;
+      color: var(--color-icon);
+    }
+
+    .collect-pop .icon-tag:hover {
+      color: var(--color-icon-hover);
+    }
+
+    .collect-pop .icon-more {
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--color-icon);
+    }
+
+    .collect-pop .icon-more:hover {
+      color: var(--color-icon-hover);
+    }
+
+    .collect-pop .read {
+      border-left: 1px solid var(--color-gray-border);
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .collect-pop .read:hover {
+      background: var(--color-hover);
+      cursor: pointer;
+    }
+
+    .collect-pop .icon-read {
+      font-size: 20px;
+      color: var(--color-yellow);
+    }
+
+    .collect-pop .tag-pane {
+      position: absolute;
+      width: 160px;
+      border-radius: 16px;
+      top: 75px;
+      right: 0;
+      padding-bottom: 8px;
+      overflow: hidden;
+      background-color: var(--color-black);
+    }
+
+    .collect-pop .tag-pane .item {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .collect-pop .tag-pane .tag-search-input-container {
+      padding: 16px;
+    }
+
+    .collect-pop .tag-pane .tag-search-input {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      border: 1px solid var(--color-yellow);
+      padding-left: 12px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      width: 100%;
+      color: #fff;
+      background-color: transparent;
+    }
+
+    .collect-pop .tag-pane .tag-search-input::placeholder {
+      color: var(--color-placeholder);
+    }
+
+    .collect-pop .tag-pane .icon-check,
+    .collect-pop .tag-pane .icon-add {
+      font-size: 18px;
+      margin-right: 6px;
+      color: var(--color-icon);
+    }
+
+    .collect-pop .tag-pane .icon-checked {
+      color: var(--color-yellow);
+    }
+
+    .collect-pop .tag-pane .item:hover {
+      cursor: pointer;
+      background-color: var(--color-hover);
+    }
+
+    .collect-pop .more-pane {
+      position: absolute;
+      width: 160px;
+      border-radius: 16px;
+      padding: 8px 0;
+      top: 75px;
+      right: 0;
+      background-color: var(--color-black);
+    }
+
+    .collect-pop .more-pane .item {
+      height: 30px;
+      line-height: 30px;
+      padding-left: 16px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: var(--color-text-gray);
+    }
+
+    .collect-pop .more-pane .item:hover {
+      background: var(--color-hover);
+    }
+
+    .collect-pop .more-pane .item i {
+      color: var(--color-icon);
+      font-size: 16px;
+      margin-right: 6px;
+    }
+  </style>
+  <style type="text/css">
+    .toast {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      z-index: 2147483647;
+      animation: fadeindown linear .2s;
+    }
+
+    .toast.hide {
+      animation: fadeoutup linear .2s;
+    }
+
+    @keyframes fadeindown {
+      from {
+        opacity: 0;
+        transform: translateY(-60px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    @keyframes fadeoutup {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-60px);
+      }
+    }
+
+    .toast-message {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      padding: 12px 14px;
+      color: #ffffff;
+      border-radius: 8px;
+      position: relative;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" id="clearly-content-css"
+    href="chrome-extension://odfonlkabodgbolnmmkdijkaeggofoop/assets/styles/frame.css">
+  <link rel="stylesheet" type="text/css" id="clearly-remixin-icon"
+    href="chrome-extension://odfonlkabodgbolnmmkdijkaeggofoop/assets/fonts/remixicon/remixicon.css">
+  <link rel="stylesheet" type="text/css" id="clearly-remixin-icon-platform"
+    href="chrome-extension://odfonlkabodgbolnmmkdijkaeggofoop/assets/fonts/remixicon/remixicon-chrome.css">
+  <style type="text/css">
+    .mjx-chtml {
+      display: inline-block;
+      line-height: 0;
+      text-indent: 0;
+      text-align: left;
+      text-transform: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100%;
+      font-size-adjust: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      word-spacing: normal;
+      white-space: nowrap;
+      float: none;
+      direction: ltr;
+      max-width: none;
+      max-height: none;
+      min-width: 0;
+      min-height: 0;
+      border: 0;
+      margin: 0;
+      padding: 1px 0
+    }
+
+    .MJXc-display {
+      display: block;
+      text-align: center;
+      margin: 1em 0;
+      padding: 0
+    }
+
+    .mjx-chtml[tabindex]:focus,
+    body :focus .mjx-chtml[tabindex] {
+      display: inline-table
+    }
+
+    .mjx-full-width {
+      text-align: center;
+      display: table-cell !important;
+      width: 10000em
+    }
+
+    .mjx-math {
+      display: inline-block;
+      border-collapse: separate;
+      border-spacing: 0
+    }
+
+    .mjx-math * {
+      display: inline-block;
+      -webkit-box-sizing: content-box !important;
+      -moz-box-sizing: content-box !important;
+      box-sizing: content-box !important;
+      text-align: left
+    }
+
+    .mjx-numerator {
+      display: block;
+      text-align: center
+    }
+
+    .mjx-denominator {
+      display: block;
+      text-align: center
+    }
+
+    .MJXc-stacked {
+      height: 0;
+      position: relative
+    }
+
+    .MJXc-stacked>* {
+      position: absolute
+    }
+
+    .MJXc-bevelled>* {
+      display: inline-block
+    }
+
+    .mjx-stack {
+      display: inline-block
+    }
+
+    .mjx-op {
+      display: block
+    }
+
+    .mjx-under {
+      display: table-cell
+    }
+
+    .mjx-over {
+      display: block
+    }
+
+    .mjx-over>* {
+      padding-left: 0px !important;
+      padding-right: 0px !important
+    }
+
+    .mjx-under>* {
+      padding-left: 0px !important;
+      padding-right: 0px !important
+    }
+
+    .mjx-stack>.mjx-sup {
+      display: block
+    }
+
+    .mjx-stack>.mjx-sub {
+      display: block
+    }
+
+    .mjx-prestack>.mjx-presup {
+      display: block
+    }
+
+    .mjx-prestack>.mjx-presub {
+      display: block
+    }
+
+    .mjx-delim-h>.mjx-char {
+      display: inline-block
+    }
+
+    .mjx-surd {
+      vertical-align: top
+    }
+
+    .mjx-mphantom * {
+      visibility: hidden
+    }
+
+    .mjx-merror {
+      background-color: #FFFF88;
+      color: #CC0000;
+      border: 1px solid #CC0000;
+      padding: 2px 3px;
+      font-style: normal;
+      font-size: 90%
+    }
+
+    .mjx-annotation-xml {
+      line-height: normal
+    }
+
+    .mjx-menclose>svg {
+      fill: none;
+      stroke: currentColor
+    }
+
+    .mjx-mtr {
+      display: table-row
+    }
+
+    .mjx-mlabeledtr {
+      display: table-row
+    }
+
+    .mjx-mtd {
+      display: table-cell;
+      text-align: center
+    }
+
+    .mjx-label {
+      display: table-row
+    }
+
+    .mjx-box {
+      display: inline-block
+    }
+
+    .mjx-block {
+      display: block
+    }
+
+    .mjx-span {
+      display: inline
+    }
+
+    .mjx-char {
+      display: block;
+      white-space: pre
+    }
+
+    .mjx-itable {
+      display: inline-table;
+      width: auto
+    }
+
+    .mjx-row {
+      display: table-row
+    }
+
+    .mjx-cell {
+      display: table-cell
+    }
+
+    .mjx-table {
+      display: table;
+      width: 100%
+    }
+
+    .mjx-line {
+      display: block;
+      height: 0
+    }
+
+    .mjx-strut {
+      width: 0;
+      padding-top: 1em
+    }
+
+    .mjx-vsize {
+      width: 0
+    }
+
+    .MJXc-space1 {
+      margin-left: .167em
+    }
+
+    .MJXc-space2 {
+      margin-left: .222em
+    }
+
+    .MJXc-space3 {
+      margin-left: .278em
+    }
+
+    .mjx-chartest {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      line-height: normal;
+      font-size: 500%
+    }
+
+    .mjx-chartest .mjx-char {
+      display: inline
+    }
+
+    .mjx-chartest .mjx-box {
+      padding-top: 1000px
+    }
+
+    .MJXc-processing {
+      visibility: hidden;
+      position: fixed;
+      width: 0;
+      height: 0;
+      overflow: hidden
+    }
+
+    .MJXc-processed {
+      display: none
+    }
+
+    .mjx-test {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100%;
+      font-size-adjust: none;
+      text-indent: 0;
+      text-transform: none;
+      letter-spacing: normal;
+      word-spacing: normal;
+      overflow: hidden;
+      height: 1px
+    }
+
+    .mjx-test.mjx-test-display {
+      display: table !important
+    }
+
+    .mjx-test.mjx-test-inline {
+      display: inline !important;
+      margin-right: -1px
+    }
+
+    .mjx-test.mjx-test-default {
+      display: block !important;
+      clear: both
+    }
+
+    .mjx-ex-box {
+      display: inline-block !important;
+      position: absolute;
+      overflow: hidden;
+      min-height: 0;
+      max-height: none;
+      padding: 0;
+      border: 0;
+      margin: 0;
+      width: 1px;
+      height: 60ex
+    }
+
+    .mjx-test-inline .mjx-left-box {
+      display: inline-block;
+      width: 0;
+      float: left
+    }
+
+    .mjx-test-inline .mjx-right-box {
+      display: inline-block;
+      width: 0;
+      float: right
+    }
+
+    .mjx-test-display .mjx-right-box {
+      display: table-cell !important;
+      width: 10000em !important;
+      min-width: 0;
+      max-width: none;
+      padding: 0;
+      border: 0;
+      margin: 0
+    }
+
+    #MathJax_CHTML_Tooltip {
+      background-color: InfoBackground;
+      color: InfoText;
+      border: 1px solid black;
+      box-shadow: 2px 2px 5px #AAAAAA;
+      -webkit-box-shadow: 2px 2px 5px #AAAAAA;
+      -moz-box-shadow: 2px 2px 5px #AAAAAA;
+      -khtml-box-shadow: 2px 2px 5px #AAAAAA;
+      padding: 3px 4px;
+      z-index: 401;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: auto;
+      height: auto;
+      display: none
+    }
+
+    .mjx-chtml .mjx-noError {
+      line-height: 1.2;
+      vertical-align: ;
+      font-size: 90%;
+      text-align: left;
+      color: black;
+      padding: 1px 3px;
+      border: 1px solid
+    }
+
+    .MJXc-TeX-unknown-R {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: normal;
+      font-weight: normal
+    }
+
+    .MJXc-TeX-unknown-I {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: italic;
+      font-weight: normal
+    }
+
+    .MJXc-TeX-unknown-B {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: normal;
+      font-weight: bold
+    }
+
+    .MJXc-TeX-unknown-BI {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: italic;
+      font-weight: bold
+    }
+
+    .MJXc-TeX-ams-R {
+      font-family: MJXc-TeX-ams-R, MJXc-TeX-ams-Rw
+    }
+
+    .MJXc-TeX-cal-B {
+      font-family: MJXc-TeX-cal-B, MJXc-TeX-cal-Bx, MJXc-TeX-cal-Bw
+    }
+
+    .MJXc-TeX-frak-R {
+      font-family: MJXc-TeX-frak-R, MJXc-TeX-frak-Rw
+    }
+
+    .MJXc-TeX-frak-B {
+      font-family: MJXc-TeX-frak-B, MJXc-TeX-frak-Bx, MJXc-TeX-frak-Bw
+    }
+
+    .MJXc-TeX-math-BI {
+      font-family: MJXc-TeX-math-BI, MJXc-TeX-math-BIx, MJXc-TeX-math-BIw
+    }
+
+    .MJXc-TeX-sans-R {
+      font-family: MJXc-TeX-sans-R, MJXc-TeX-sans-Rw
+    }
+
+    .MJXc-TeX-sans-B {
+      font-family: MJXc-TeX-sans-B, MJXc-TeX-sans-Bx, MJXc-TeX-sans-Bw
+    }
+
+    .MJXc-TeX-sans-I {
+      font-family: MJXc-TeX-sans-I, MJXc-TeX-sans-Ix, MJXc-TeX-sans-Iw
+    }
+
+    .MJXc-TeX-script-R {
+      font-family: MJXc-TeX-script-R, MJXc-TeX-script-Rw
+    }
+
+    .MJXc-TeX-type-R {
+      font-family: MJXc-TeX-type-R, MJXc-TeX-type-Rw
+    }
+
+    .MJXc-TeX-cal-R {
+      font-family: MJXc-TeX-cal-R, MJXc-TeX-cal-Rw
+    }
+
+    .MJXc-TeX-main-B {
+      font-family: MJXc-TeX-main-B, MJXc-TeX-main-Bx, MJXc-TeX-main-Bw
+    }
+
+    .MJXc-TeX-main-I {
+      font-family: MJXc-TeX-main-I, MJXc-TeX-main-Ix, MJXc-TeX-main-Iw
+    }
+
+    .MJXc-TeX-main-R {
+      font-family: MJXc-TeX-main-R, MJXc-TeX-main-Rw
+    }
+
+    .MJXc-TeX-math-I {
+      font-family: MJXc-TeX-math-I, MJXc-TeX-math-Ix, MJXc-TeX-math-Iw
+    }
+
+    .MJXc-TeX-size1-R {
+      font-family: MJXc-TeX-size1-R, MJXc-TeX-size1-Rw
+    }
+
+    .MJXc-TeX-size2-R {
+      font-family: MJXc-TeX-size2-R, MJXc-TeX-size2-Rw
+    }
+
+    .MJXc-TeX-size3-R {
+      font-family: MJXc-TeX-size3-R, MJXc-TeX-size3-Rw
+    }
+
+    .MJXc-TeX-size4-R {
+      font-family: MJXc-TeX-size4-R, MJXc-TeX-size4-Rw
+    }
+
+    .MJXc-TeX-vec-R {
+      font-family: MJXc-TeX-vec-R, MJXc-TeX-vec-Rw
+    }
+
+    .MJXc-TeX-vec-B {
+      font-family: MJXc-TeX-vec-B, MJXc-TeX-vec-Bx, MJXc-TeX-vec-Bw
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-ams-R;
+      src: local('MathJax_AMS'), local('MathJax_AMS-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-ams-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-B;
+      src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-Bx;
+      src: local('MathJax_Caligraphic');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-R;
+      src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-B;
+      src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-Bx;
+      src: local('MathJax_Fraktur');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-BI;
+      src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-BIx;
+      src: local('MathJax_Math');
+      font-weight: bold;
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-BIw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-R;
+      src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-B;
+      src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Bx;
+      src: local('MathJax_SansSerif');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-I;
+      src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Ix;
+      src: local('MathJax_SansSerif');
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Iw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-script-R;
+      src: local('MathJax_Script'), local('MathJax_Script-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-script-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-type-R;
+      src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-type-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-R;
+      src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-B;
+      src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Bx;
+      src: local('MathJax_Main');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-I;
+      src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Ix;
+      src: local('MathJax_Main');
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Iw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-R;
+      src: local('MathJax_Main'), local('MathJax_Main-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-I;
+      src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-Ix;
+      src: local('MathJax_Math');
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-Iw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size1-R;
+      src: local('MathJax_Size1'), local('MathJax_Size1-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size1-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size2-R;
+      src: local('MathJax_Size2'), local('MathJax_Size2-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size2-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size3-R;
+      src: local('MathJax_Size3'), local('MathJax_Size3-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size3-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size4-R;
+      src: local('MathJax_Size4'), local('MathJax_Size4-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size4-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-vec-R;
+      src: local('MathJax_Vector'), local('MathJax_Vector-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-vec-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-vec-B;
+      src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-vec-Bx;
+      src: local('MathJax_Vector');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-vec-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')
+    }
+  </style>
+</head>
+
+<body class="vsc-initialized" data-new-gr-c-s-check-loaded="14.1147.0" data-gr-ext-installed=""><audio
+    class="audio-for-speech" src=""></audio>
+  <div class="translate-tooltip-mtz aquamarine sm-root translate hidden_translate">
+    <div class="header-wrapper">
+      <div class="header-controls">
+        <span class="sound-translate"></span>
+        <span class="copy aquamarine"></span>
+        <span class="settings-translator"></span>
+      </div>
+      <div class="header-title">translator</div>
+
+
+    </div>
+    <div class="translated-text">
+      <div id="translator-words" class="words"></div>
+      <div class="sentences aquamarine"></div>
+    </div>
+    <div class="trans_controls">
+      <div class="trans_controls__control-wrapper double_click">
+        <span class="trans_controls__toggle dbl-click " data-store="double_click">
+          <div class="trans_controls__inner-circle"></div>
+        </span>
+        <span class="trans_controls__description">
+          Double-click
+        </span>
+      </div>
+      <div class="trans_controls__control-wrapper selection">
+        <span class="trans_controls__toggle icon-trans " data-store="icon_trans">
+          <div class="trans_controls__inner-circle"></div>
+        </span>
+        <span class="trans_controls__description">
+          Select to translate
+        </span>
+      </div>
+    </div>
+  </div><span class="translate-button-mtz hidden_translate aquamarine"></span>
+  <div id="MathJax_Message" style="display: none;"></div> <a class="skip-to-main"
+    href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#main-content">Skip to main content</a> <svg
+    xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+        <polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+      <title id="svg-external-link-title">(external link)</title>
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </symbol>
+  </svg>
+  <div class="side-bar">
+    <div class="site-header"> <a href="https://karthikv1392.github.io/cs3301_osn/" class="site-title lh-tight">
+        Operating Systems and Networks </a> <a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#"
+        id="menu-button" class="site-button"> <svg viewBox="0 0 24 24" class="icon">
+          <use xlink:href="#svg-menu"></use>
+        </svg> </a></div>
+    <nav aria-label="Main" id="site-nav" class="site-nav">
+      <ul class="nav-list">
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/home/"
+            class="nav-list-link">Home</a></li>
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#"
+            class="nav-list-expander" aria-label="toggle links in Modules category"> <svg viewBox="0 0 24 24">
+              <use xlink:href="#svg-arrow-right"></use>
+            </svg> </a><a href="https://karthikv1392.github.io/cs3301_osn/modules/" class="nav-list-link">Modules</a>
+          <ul class="nav-list "></ul>
+        </li>
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#"
+            class="nav-list-expander" aria-label="toggle links in Lectures category"> <svg viewBox="0 0 24 24">
+              <use xlink:href="#svg-arrow-right"></use>
+            </svg> </a><a href="https://karthikv1392.github.io/cs3301_osn/lectures/" class="nav-list-link">Lectures</a>
+          <ul class="nav-list ">
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-1"
+                class="nav-list-link">Week 1 - Introduction to Course Overview and Process Virtualization</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-2"
+                class="nav-list-link">Week 2 - Process Virtualization - Mechanisms and Policies</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-3"
+                class="nav-list-link">Week 3 - Process Scheduling and Process Communication</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-4"
+                class="nav-list-link">Week 4 - Networking Layers, Sockets and Transport Layer</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-5"
+                class="nav-list-link">Week 5 - Introduction to Memory Virtualization</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-6"
+                class="nav-list-link">Week 6 - Memory Virutalization techniques</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-7"
+                class="nav-list-link">Week 7 - Page Tables, Mechanisms and Policies</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-8"
+                class="nav-list-link">Week 8 - Application Layer</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-9"
+                class="nav-list-link">Week 9 - Introduction to Concurrency</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-10"
+                class="nav-list-link">Week 10 - Locks and Condition Variables</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-11"
+                class="nav-list-link">Week 11 - Concurrency through Semaphores</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-12"
+                class="nav-list-link">Week 12 - Link Layer and Network Layer</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-13"
+                class="nav-list-link">Week 13 - Persistence</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-14"
+                class="nav-list-link">Week 14 - Files and File System</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/lectures/week-15"
+                class="nav-list-link">Week 15 - Revision</a></li>
+          </ul>
+        </li>
+        <li class="nav-list-item active"><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#"
+            class="nav-list-expander" aria-label="toggle links in Mini Projects category"> <svg viewBox="0 0 24 24">
+              <use xlink:href="#svg-arrow-right"></use>
+            </svg> </a><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/" class="nav-list-link">Mini
+            Projects</a>
+          <ul class="nav-list ">
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp0"
+                class="nav-list-link">Mini Project 0</a></li>
+            <li class="nav-list-item active"><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1"
+                class="nav-list-link active">Mini Project 1</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp2"
+                class="nav-list-link">Mini Project 2</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp3"
+                class="nav-list-link">Mini Project 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/project/"
+            class="nav-list-link">Course Project</a></li>
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#"
+            class="nav-list-expander" aria-label="toggle links in Tutorials category"> <svg viewBox="0 0 24 24">
+              <use xlink:href="#svg-arrow-right"></use>
+            </svg> </a><a href="https://karthikv1392.github.io/cs3301_osn/tutorial/" class="nav-list-link">Tutorials</a>
+          <ul class="nav-list ">
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/tutorial/tutorial-1"
+                class="nav-list-link">Tutorial 1 - Introduction to System Calls</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/tutorial/tutorial-2"
+                class="nav-list-link">Tutorial 2 - Working towards your shell</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/tutorial/tutorial-3"
+                class="nav-list-link">Tutorial 3 - Introduction to xv6</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/tutorial/tutorial-4"
+                class="nav-list-link">Tutorial 4 - On Networks and Mini Project 1</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/tutorial/tutorial-7"
+                class="nav-list-link">Tutorial 7 - Final Course Project</a></li>
+            <li class="nav-list-item "><a href="https://karthikv1392.github.io/cs3301_osn/tutorial/tutorial-8"
+                class="nav-list-link">Tutorial 8 - Copy on Write and Concurrency</a></li>
+          </ul>
+        </li>
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/course_policy/"
+            class="nav-list-link">Course Policy</a></li>
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/calendar/"
+            class="nav-list-link">Calendar</a></li>
+        <li class="nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/staff/"
+            class="nav-list-link">Staff</a></li>
+      </ul>
+    </nav>
+    <footer class="site-footer"> This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the
+        Docs</a>, a documentation theme for Jekyll.</footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      <div class="search">
+        <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0"
+            placeholder="Search Operating Systems and Networks" aria-label="Search Operating Systems and Networks"
+            autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24"
+              class="search-icon">
+              <use xlink:href="#svg-search"></use>
+            </svg></label></div>
+        <div id="search-results" class="search-results"></div>
+      </div>
+      <nav aria-label="Auxiliary" class="aux-nav">
+        <ul class="aux-nav-list">
+          <li class="aux-nav-list-item"> <a href="https://karthikvaidhyanathan.com/" class="site-button"> Karthik
+              Vaidhyanathann </a></li>
+          <li class="aux-nav-list-item"> <a href="https://courses.iiit.ac.in/" class="site-button"> Moodle </a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb-nav-list">
+          <li class="breadcrumb-nav-list-item"><a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/">Mini
+              Projects</a></li>
+          <li class="breadcrumb-nav-list-item"><span>Mini Project 1</span></li>
+        </ol>
+      </nav>
+      <div id="main-content" class="main-content" role="main">
+        <h1 id="mini-project-1--building-your-own-shell"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#mini-project-1--building-your-own-shell"
+            class="anchor-heading" aria-labelledby="mini-project-1--building-your-own-shell"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Mini Project 1 : Building your own shell</h1>
+        <p>Before starting, make sure to read this document <strong>completely</strong> including <strong>Instructions,
+            Guidelines, Plagiarism Policy and Submission Guidelines described at the end</strong> before asking any
+          doubts as they might already be covered here. Additionally, you are recommended to read these to avoid
+          unnecessary penalties.</p>
+        <h2 id="github-classroom"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#github-classroom" class="anchor-heading"
+            aria-labelledby="github-classroom"><svg viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> GitHub Classroom</h2>
+        <p>Follow <a href="https://classroom.github.com/a/76mHqLr5">this link</a> to accept the assignment. You will
+          then be assigned a private repository on GitHub. This is where you will be working on the mini project. All
+          relevant instructions regarding this project can be found below.</p>
+        <h2 id="instructions"> <a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#instructions"
+            class="anchor-heading" aria-labelledby="instructions"><svg viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Instructions</h2>
+        <p>In this Mini Project, you will be building your own shell using C. As the scale of code will be very large,
+          it is <strong>necessary to write modular code. Do NOT write monolithic code.</strong> Following is the
+          definition of what modular code should look like : your codebase must be separated in different C files based
+          on the tasks that it is intended to perform. Create header files to include headers from C library. You will
+          be penalized heavily if your code is non modular.</p>
+        <p>It is highly recommended to start this mini project early to complete it in time as it will be quite
+          intensive. There are 3 parts to this assignment with two deadlines in total (including final deadline). More
+          clearly, you are required to submit your code 2 times in the duration of this assignment with the last
+          deadline being the final submission deadline (Parts A,B,C combined) before getting penalized for submitting
+          after this till the hard deadline which is 1 week after it i.e. 19 Sep 2023</p>
+        <ul>
+          <li>1st deadline : Only part A is required to be submitted 50% points of Part A will be given based on this
+            submission.</li>
+          <li>2nd deadline : All Parts A, B and C must be submitted. 50% points of Part A and 100% points of Part B,C
+            will be given based on this submission.</li>
+        </ul>
+        <p>For easier understanding, let’s say Part A is worth 100 points total. If your submission is worth 20 points
+          from Part A during 1st deadline, and you submit it completely during 2nd deadline (100 points), you will get a
+          total of (20/2) + (100/2) = 60 points. If you submit Part A completely in both deadlines, you will get full
+          marks. For Part B,C: whatever you submit during 2nd deadline will be used to award you points. <strong>Thus,
+            in case of missing 1st deadline, 50% points of Part A will be lost even if that part is submitted at a later
+            deadline.</strong></p>
+        <h2 id="deadlines"> <a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#deadlines"
+            class="anchor-heading" aria-labelledby="deadlines"><svg viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Deadlines</h2>
+        <p><strong>Intermediary deadline : 11:59 PM - 25 Aug, 2023</strong></p>
+        <p><strong>Final Soft deadline : 11:59 PM - 12 Sep, 2023</strong></p>
+        <h2 id="part-a--basic-system-calls"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#part-a--basic-system-calls"
+            class="anchor-heading" aria-labelledby="part-a--basic-system-calls"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Part A : Basic System Calls</h2>
+        <h3 id="specification-1--display-requirement-5"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-1--display-requirement-5"
+            class="anchor-heading" aria-labelledby="specification-1--display-requirement-5"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 1 : Display Requirement [5]</h3>
+        <p>On every line when waiting for user input, a shell prompt of the following form must appear along with it. Do
+          NOT hard code the username/system name here. The current directory address should be shown in the prompt as
+          well.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Username</span><span class="err">@</span><span class="na">SystemName</span><span class="err">:~</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>For example, if system name is “SYS”, username is “JohnDoe”, and the user is currently in the home directory,
+          then prompt looks like this :</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The directory from which shell is invoked becomes the home directory for the shell and represented with “~”.
+          All paths inside this directory should be shown relative to it. Absolute path of a directory/file must be
+          shown when outside the home directory.</p>
+        <p>When user changes the working directory, the corresponding change in path of directory must be reflected in
+          the next prompt. For example, on going to the parent directory of the home directory of shell, following form
+          of prompt is expected :</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:/</span><span class="na">home</span><span class="err">/</span><span class="na">johndoe</span><span class="err">/</span><span class="na">sem3</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <h3 id="specification-2--input-requirements-5"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-2--input-requirements-5"
+            class="anchor-heading" aria-labelledby="specification-2--input-requirements-5"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 2 : Input Requirements [5]</h3>
+        <p>Keep in mind the following requirements for input when implementing your shell :</p>
+        <ul>
+          <li>Your shell should support a ‘;’ or ‘&amp;’ separated list of commands. You can use
+            ‘<strong>strtok</strong>’ to tokenize the input.</li>
+          <li>Your shell should account for random spaces and tabs when taking input.</li>
+          <li>The “;” command can be used to give multiple commands at the same time. This works similar to how “;”
+            works in Bash.</li>
+          <li>‘&amp;’ operator runs the command preceding it in the background after printing the process id of the
+            newly created process.</li>
+        </ul>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">.</span><span class="o">/</span><span class="nx">a</span><span class="p">.</span><span class="nx">out</span>
+<span class="o">&lt;</span><span class="nx">JohnDoe</span><span class="p">@</span><span class="nd">SYS</span><span class="p">:</span><span class="o">~&gt;</span> <span class="nx">vim</span>      <span class="o">&amp;</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">35006</span>
+
+<span class="o">&lt;</span><span class="nx">JohnDoe</span><span class="p">@</span><span class="nd">SYS</span><span class="p">:</span><span class="o">~&gt;</span> <span class="nx">sleep</span> <span class="mi">5</span> <span class="o">&amp;</span>     <span class="nx">echo</span>     <span class="dl">"</span><span class="s2">Lorem ipsum</span><span class="dl">"</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="mi">35036</span>
+<span class="nx">Lorem</span> <span class="nx">ipsum</span>
+<span class="err">#</span> <span class="nx">sleep</span> <span class="nx">runs</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">background</span> <span class="k">while</span> <span class="nx">echo</span> <span class="nx">runs</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">foreground</span>
+
+<span class="o">&lt;</span><span class="nx">JohnDoe</span><span class="p">@</span><span class="nd">SYS</span><span class="p">:</span><span class="o">~&gt;</span> <span class="nx">warp</span> <span class="nx">test</span> <span class="p">;</span> <span class="nx">pwd</span>
+<span class="nx">sleep</span> <span class="kd">with</span> <span class="nx">pid</span> <span class="mi">35036</span> <span class="nx">exited</span> <span class="nx">normally</span> <span class="err">#</span> <span class="nx">after</span> <span class="mi">5</span> <span class="nx">seconds</span>
+<span class="o">~</span><span class="sr">/tes</span><span class="err">t
+</span>
+<span class="o">&lt;</span><span class="nx">JohnDoe</span><span class="p">@</span><span class="nd">SYS</span><span class="p">:</span><span class="o">~</span><span class="sr">/test&gt;</span><span class="err"> 
+</span></code></pre>
+          </div>
+        </div>
+        <p>If any command is erroneous, then error should be printed.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleeeep 6
+ERROR : 'sleeeep' is not a valid command
+</code></pre>
+          </div>
+        </div>
+        <h3 id="specification-3--warp-5"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-3--warp-5"
+            class="anchor-heading" aria-labelledby="specification-3--warp-5"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 3 : warp [5]</h3>
+        <p>‘warp’ command changes the directory that the shell is currently in. It should also print the full path of
+          working directory after changing. The directory path/name can be provided as argument to this command.</p>
+        <ul>
+          <li>You are also expected to implement the “.”, “..”, “~”, and “-” flags in warp. ~ represents the home
+            directory of shell (refer to specification 1).</li>
+          <li>You should support both absolute and relative paths, along with paths from home directory.</li>
+          <li>If more than one argument is present, execute warp sequentially with all of them being the argument one by
+            one (from left to right).</li>
+          <li>If no argument is present, then warp into the home directory.</li>
+        </ul>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> warp test
+/home/johndoe/test
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~/</span><span class="na">test</span><span class="p">&gt;</span> warp assignment
+/home/johndoe/test/assignment
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~/</span><span class="na">test</span><span class="err">/</span><span class="na">assignment</span><span class="p">&gt;</span> warp ~
+/home/johndoe
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> warp -
+/home/johndoe/test/assignment
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~/</span><span class="na">test</span><span class="err">/</span><span class="na">assignment</span><span class="p">&gt;</span> warp .. tutorial
+/home/johndoe/test
+/home/johndoe/test/tutorial
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~/</span><span class="na">test</span><span class="err">/</span><span class="na">tutorial</span><span class="p">&gt;</span> warp ~/project
+/home/johndoe/project
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~/</span><span class="na">project</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p><strong>Note :</strong></p>
+        <ul>
+          <li>You can assume that the paths/names will not contain any whitespace characters.</li>
+          <li>DON’T use ‘execvp’ or similar commands for implementing this.</li>
+        </ul>
+        <h3 id="specification-4--peek-8"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-4--peek-8"
+            class="anchor-heading" aria-labelledby="specification-4--peek-8"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 4 : peek [8]</h3>
+        <p>‘peek’ command lists all the files and directories in the specified directories in lexicographic order
+          (default peek does not show hidden files). You should support the -a and -l flags.</p>
+        <ul>
+          <li>-l : displays extra information</li>
+          <li>-a : displays all files, including hidden files</li>
+        </ul>
+        <p>Similar to warp, you are expected to support “.”, “..”, “~”, and “-” symbols.</p>
+        <ul>
+          <li>Support both relative and absolute paths.</li>
+          <li>If no argument is given, you should peek at the current working directory.</li>
+          <li>Multiple arguments will not be given as input.</li>
+        </ul>
+        <p>The input will always be in the format :</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nx">peek</span> <span class="o">&lt;</span><span class="nx">flags</span><span class="o">&gt;</span> <span class="p">&lt;</span><span class="nt">path</span><span class="err">/</span><span class="na">name</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Handle the following cases also in case of flags :</p>
+        <ul>
+          <li>peek -a &lt;path/name&gt;</li>
+          <li>peek -l &lt;path/name&gt;</li>
+          <li>peek -a -l &lt;path/name&gt;</li>
+          <li>peek -l -a &lt;path/name&gt;</li>
+          <li>peek -la &lt;path/name&gt;</li>
+          <li>peek -al &lt;path/name&gt;</li>
+        </ul>
+        <p><strong>Note :</strong></p>
+        <ul>
+          <li>You can assume that the paths/names will not contain any whitespace characters.</li>
+          <li>DON’T use ‘execvp’ or similar commands for implementing this.</li>
+          <li>Use specific color coding to differentiate between file names, directories and executables in the output
+            [green for executables, white for files and blue for directories].</li>
+          <li>Print a list of file/folders separated by newline characters.</li>
+          <li>The details printed with -l should be the same as the ls command present in Bash.</li>
+        </ul>
+        <h3 id="specification-5--pastevents-commands-8"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-5--pastevents-commands-8"
+            class="anchor-heading" aria-labelledby="specification-5--pastevents-commands-8"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 5 : pastevents commands [8]</h3>
+        <p><strong>pastevents</strong></p>
+        <p>Implement a ‘pastevents’ command which is similar to the actual history command in bash. Your implementation
+          should store (and output) the 15 most recent command statements given as input to the shell based on some
+          constraints. You must overwrite the oldest commands if more than the set number (15) of commands are entered.
+          <code class="language-plaintext highlighter-rouge">pastevents</code> is persistent over different shell runs,
+          i.e., the most recent command statements should be stored when the shell is exited and be retrieved later on
+          when the shell is opened.</p>
+        <p>Note :</p>
+        <ul>
+          <li>DO NOT store a command in pastevents if it is the exactly same as the previously entered command. (You may
+            use direct string comparison, <code class="language-plaintext highlighter-rouge">strcmp()</code>, for this)
+          </li>
+          <li>Store the arguments along with the command</li>
+          <li>(<em>Edit</em>) Store all statements except commands that include pastevents or pastevents purge.</li>
+        </ul>
+        <p><strong>pastevents purge</strong></p>
+        <p>Clears all the pastevents currently stored. Do not store this command in the pastevents.</p>
+        <p><strong>pastevents execute &lt;index&gt;</strong></p>
+        <p>Execute the command at <index> position in pastevents (ordered from most recent to oldest). Do not store
+            statements containing <span class="MathJax_Preview" style="color: inherit;"></span><span
+              id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0"
+              style="font-size: 93%; position: relative;"
+              data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mstyle displaystyle=&quot;true&quot;&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo&gt;&amp;#x2217;&lt;/mo&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/mstyle&gt;&lt;/math&gt;"
+              role="presentation"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2"
+                  class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mstyle"><span id="MJXc-Node-4"
+                      class="mjx-mrow"><span id="MJXc-Node-5" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.474em;">p</span></span><span id="MJXc-Node-6"
+                        class="mjx-mo" style="padding-left: 0.267em; padding-right: 0.267em;"><span
+                          class="mjx-char MJXc-TeX-main-R"
+                          style="padding-top: 0.205em; padding-bottom: 0.339em;">∗</span></span><span id="MJXc-Node-7"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">e</span></span><span id="MJXc-Node-8"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">v</span></span><span id="MJXc-Node-9"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">e</span></span><span id="MJXc-Node-10"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">n</span></span><span id="MJXc-Node-11"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.407em; padding-bottom: 0.272em;">t</span></span><span id="MJXc-Node-12"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">s</span></span><span id="MJXc-Node-13"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">e</span></span><span id="MJXc-Node-14"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">x</span></span><span id="MJXc-Node-15"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">e</span></span><span id="MJXc-Node-16"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">c</span></span><span id="MJXc-Node-17"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">u</span></span><span id="MJXc-Node-18"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.407em; padding-bottom: 0.272em;">t</span></span><span id="MJXc-Node-19"
+                        class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I"
+                          style="padding-top: 0.205em; padding-bottom: 0.272em;">e</span></span></span></span></span></span><span
+                class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mstyle displaystyle="true">
+                    <mi>p</mi>
+                    <mo>∗</mo>
+                    <mi>e</mi>
+                    <mi>v</mi>
+                    <mi>e</mi>
+                    <mi>n</mi>
+                    <mi>t</mi>
+                    <mi>s</mi>
+                    <mi>e</mi>
+                    <mi>x</mi>
+                    <mi>e</mi>
+                    <mi>c</mi>
+                    <mi>u</mi>
+                    <mi>t</mi>
+                    <mi>e</mi>
+                  </mstyle>
+                </math></span></span>
+            <script type="math/asciimath" id="MathJax-Element-1">pastevents execute</script> if it matches the most
+            recent command.
+          </index>
+        </p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> peek test
+# output
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 5
+# output
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 5
+# output
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~/</span><span class="na">test</span><span class="p">&gt;</span> echo "Lorem ipsum"
+# output
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+peek test
+sleep 5
+echo "Lorem ipsum"
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents execute 1
+# output of echo "Lorem ipsum"
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+peek test
+sleep 5
+echo "Lorem ipsum"
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents execute 3
+# output of peek test
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+peek test
+sleep 5
+echo "Lorem ipsum"
+peek test
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents purge
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>(<em>Edit</em>)</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents # Assuming this is the first time the shell is run
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 1
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+sleep 1
+sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 2
+sleep 1
+sleep 2  # sleep 2 is not repeated
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 1; pastevents
+sleep 1
+sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents # Notice how 'sleep 1; pastevents' is not considered as it contains the pastevents command
+sleep 1
+sleep 2
+
+*** Exit Shell ***
+
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+sleep 1
+sleep 2
+exit
+sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 3; pastevents execute 1
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 3; sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 3
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 3; sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+sleep 1
+sleep 2
+exit
+sleep 2
+sleep 3; sleep 2 # Only output once as 'sleep 3; pastevents execute 1' is stored as 'sleep 3; sleep 2'
+sleep 3
+sleep 3; sleep 2
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents purge; sleep 1
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents # No output as the previous command contained pastevents purge
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 1
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> pastevents
+sleep 1
+</code></pre>
+          </div>
+        </div>
+        <p><strong>NOTE</strong> - handling omissions in the case of background processes is left to student (as you
+          need not handle background execution for user defined commands). However, ensure that you write the
+          assumptions made in the README and that there is no infinite recursion (pastevents execute calling pastevents
+          execute calling pastevents execute…)</p>
+        <h3 id="specification-6--system-commands-12"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-6--system-commands-12"
+            class="anchor-heading" aria-labelledby="specification-6--system-commands-12"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 6 : System commands [12]</h3>
+        <p>Your shell must be able to execute the other system commands present in Bash as well like emacs, gedit etc.
+          This should be possible in both foreground and background processes.</p>
+        <p><strong>Foreground Process</strong></p>
+        <p>Executing a command in foreground means the shell will wait for that process to complete and regain control
+          afterwards. Control of terminal is handed over to this process for the time being while it is running.</p>
+        <p>Time taken by the foreground process and the name of the process should be printed in the next prompt if
+          process takes &gt; 2 seconds to run. Round the time down to integer before printing in prompt.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 5
+# sleeps for 5 seconds
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span> <span class="na">sleep</span> <span class="err">:</span> <span class="na">5s</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p><strong>Background Process</strong></p>
+        <p>Any command invoked with “&amp;” is treated as a background command. This implies that your shell will spawn
+          that process but doesn’t hand the control of terminal to it. Shell will keep taking other user commands.
+          Whenever a new background process is started, print the PID of the newly created background process on your
+          shell also.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 10 <span class="err">&amp;</span>
+13027
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> sleep 20 <span class="err">&amp;</span>                       # After 10 seconds
+Sleep exited normally (13027)
+13054
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> echo "Lorem Ipsum"               # After 20 seconds
+Sleep exited normally (13054)
+Lorem Ipsum
+</code></pre>
+          </div>
+        </div>
+        <p><strong>Note :</strong></p>
+        <ul>
+          <li><strong>No need</strong> to handle background processes for any commands implemented by yourself (warp,
+            peek, pastevents etc.)</li>
+          <li>You should be able to run multiple background processes.</li>
+          <li>Whenever background process finishes, display message to user (after user enters any command, display all
+            ended between last command run and this).</li>
+          <li>Print process name along with pid when background process ends. Also mention if the process ended normally
+            or abnormally.</li>
+        </ul>
+        <h3 id="specification-7--proclore-5"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-7--proclore-5"
+            class="anchor-heading" aria-labelledby="specification-7--proclore-5"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 7 : proclore [5]</h3>
+        <p>proclore is used to obtain information regarding a process. If an argument is missing, print the information
+          of your shell.</p>
+        <p>Information required to print :</p>
+        <ul>
+          <li>pid</li>
+          <li>Process Status (R/R+/S/S+/Z)</li>
+          <li>Process group</li>
+          <li>Virtual Memory</li>
+          <li>Executable path of process</li>
+        </ul>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> proclore
+pid : 210
+process status : R+
+Process Group : 210
+Virtual memory : 167142
+executable path : ~/a.out
+
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> proclore 301
+pid : 301
+process Status : R
+Process Group : 243
+Virtual memory : 177013
+executable Path : /usr/bin/gcc
+</code></pre>
+          </div>
+        </div>
+        <p>Process states :</p>
+        <ul>
+          <li>R/R+ : Running</li>
+          <li>S/S+ : Sleeping in an interruptible wait</li>
+          <li>Z : Zombie</li>
+        </ul>
+        <p>The “+” signifies whether it is a foreground or background process, i.e., add “+” only if it is a
+          <em>foreground</em> process.</p>
+        <h3 id="specification-8--seek-8"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-8--seek-8"
+            class="anchor-heading" aria-labelledby="specification-8--seek-8"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 8 : seek [8]</h3>
+        <p>‘seek’ command looks for a file/directory in the specified target directory (or current if no directory is
+          specified). It returns a list of relative paths (from target directory) of all matching files/directories
+          <strong>(files in green and directories in blue)</strong> separated with a newline character.</p>
+        <p>Note that by files, the text here refers to non-directory files.</p>
+        <p><strong>Flags :</strong></p>
+        <ul>
+          <li>-d : Only look for directories (ignore files even if name matches)</li>
+          <li>-f : Only look for files (ignore directories even if name matches)</li>
+          <li>-e : This flag is effective only when a single file or a single directory with the name is found. If only
+            one file (and no directories) is found, then print it’s output. If only one directory (and no files) is
+            found, then change current working directory to it. Otherwise, the flag has no effect. This flag should work
+            with -d and -f flags. If -e flag is enabled but the directory does not have access permission (execute) or
+            file does not have read permission, then output <strong>“Missing permissions for task!”</strong></li>
+        </ul>
+        <p><strong>Argument 1 :</strong></p>
+        <p>The target that the user is looking for. A name <strong>without whitespace characters</strong> will be given
+          here. You have to look for a file/folder with the exact name as this.</p>
+        <p><strong>Argument 2 :</strong></p>
+        <p>The path to target directory where the search will be performed (this path can have symbols like . and ~ as
+          explained in the peek command). If this argument is missing, target directory is the current working
+          directory. The target directory’s tree must be searched (and not just the directory).</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek newfolder
+./newfolder
+./doe/newfolder
+./doe/newfolder/newfolder.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek newfolder ./doe
+./newfolder                   # This is relative to ./doe
+./newfolder/newfolder.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek -d newfolder ./doe
+./newfolder
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek -f newfolder ./doe
+./newfolder/newfolder.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek newfolder ./john
+No match found!
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek -d -f newfolder ./doe
+Invalid flags!
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek -e -f newfolder ./doe
+./newfolder/newfolder.txt
+This is a new folder!    # Content of newfolder.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> seek -e -d newfolder ./doe
+./newfolder/
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~/</span><span class="na">doe</span><span class="err">/</span><span class="na">newfolder</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Print “<strong>No match found!</strong>” in case no matching files/directories is found. Note that -d and -f
+          flag can’t be used at the same time and must return error message “<strong>Invalid flags!</strong>”.</p>
+        <p>A call to this command will always be in the format :</p>
+        <p><strong>seek &lt;flags&gt; &lt;search&gt; &lt;target_directory&gt;</strong></p>
+        <h2 id="part-b--processes-files-and-misc"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#part-b--processes-files-and-misc"
+            class="anchor-heading" aria-labelledby="part-b--processes-files-and-misc"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Part B : Processes, Files and Misc.</h2>
+        <p>Note : Please read specification 9-11 together before attempting as one’s implementation will affect the
+          other. The evaluation will be done separately, this note is just for your convenience.</p>
+        <h3 id="specification-9--io-redirection-8"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-9--io-redirection-8"
+            class="anchor-heading" aria-labelledby="specification-9--io-redirection-8"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 9 : I/O Redirection [8]</h3>
+        <p>I/O Redirection is when you change the default input/output (which is the terminal) to another file. This
+          file can be used to read input into a program or to capture the output of a program. This specification should
+          work for all commands - user defined as well as system commands defined in bash. Your shell should support
+          &gt;, &lt;,&nbsp;» (&lt; should work with both &gt; and&nbsp;»).</p>
+        <ul>
+          <li>&gt; : Outputs to the filename following “&gt;”.</li>
+          <li>&gt;&gt; : Similar to “&gt;” but appends instead of overwriting if the file already exists.</li>
+          <li>&lt; : Reads input from the filename following “&lt;”.</li>
+        </ul>
+        <p>Your shell should handle these cases appropriately:</p>
+        <ul>
+          <li>An error message “No such input file found!” should be displayed if the input file does not exist.</li>
+          <li>The output file should be created (with permissions 0644) if it does not already exist in both &gt;
+            and&nbsp;».</li>
+          <li>In case the output file already exists, it should be overwritten in case of &gt; and appended to in case
+            of&nbsp;».</li>
+        </ul>
+        <p>You are NOT required to handle multiple inputs and outputs.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> echo "Hello world" &gt; newfile.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> cat newfile.txt
+Hello world
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> wc <span class="p">&lt;</span> <span class="na">a</span><span class="err">.</span><span class="na">txt</span>
+<span class="na">1</span> <span class="na">2</span> <span class="na">12</span>         <span class="err">#</span> <span class="na">There</span> <span class="na">can</span> <span class="na">be</span> <span class="na">extra</span> <span class="na">spaces</span>
+<span class="err">&lt;</span><span class="na">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> echo "Lorem ipsum" &gt; newfile.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> cat newfile.txt
+Lorem ipsum
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> echo "dolor sit amet" &gt;&gt; newfile.txt
+Lorem ipsum
+dolor sit amet
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> wc <span class="p">&lt;</span> <span class="na">newfile</span><span class="err">.</span><span class="na">txt</span> <span class="p">&gt;</span> a.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> cat a.txt
+2 5 27        # There can be extra spaces
+</code></pre>
+          </div>
+        </div>
+        <h3 id="specification-10--pipes-8"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-10--pipes-8"
+            class="anchor-heading" aria-labelledby="specification-10--pipes-8"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 10 : Pipes [8]</h3>
+        <p>Pipes are used to pass information between commands. It takes the output from command on left and passes it
+          as standard input to the command on right. Your shell should support any number of pipes. This specification
+          should work for all commands - user defined as well as system commands defined in bash.</p>
+        <p><strong>Note :</strong></p>
+        <ul>
+          <li>Return error “Invalid use of pipe”, if there is nothing to the left or to the right of a pipe.</li>
+          <li>Run all the commands sequentially from left to right if pipes are present.</li>
+        </ul>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> echo "Lorem Ipsum" | wc
+1 2 12      # extra spaces can be present
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> echo "Lorem Ipsum" | wc | sed 's/ //g'
+1212
+</code></pre>
+          </div>
+        </div>
+        <h3 id="specification-11--redirection-along-with-pipes-5"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-11--redirection-along-with-pipes-5"
+            class="anchor-heading" aria-labelledby="specification-11--redirection-along-with-pipes-5"><svg
+              viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 11 : Redirection along with pipes [5]</h3>
+        <p>This specification requires you to be able to run I/O redirection along with pipes. It should support any
+          number of pipes (but not multiple inputs and outputs from I/O redirection). In short, you are required to make
+          sure that Specification 8 and Specification 9 work when given as input together.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> cat a.txt
+Lorem Ipsum
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> cat <span class="p">&lt;</span> <span class="na">a</span><span class="err">.</span><span class="na">txt</span> <span class="err">|</span> <span class="na">wc</span> <span class="err">|</span> <span class="na">sed</span> <span class="s">'s/ //g'</span> <span class="err">|</span> <span class="na">cat</span> <span class="p">&gt;</span> b.txt
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> cat b.txt
+1212
+</code></pre>
+          </div>
+        </div>
+        <h3 id="specification-12--activities-5"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-12--activities-5"
+            class="anchor-heading" aria-labelledby="specification-12--activities-5"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 12 : activities [5]</h3>
+        <p>This specification requires you to print a list of all the processes currently running that were spawned by
+          your shell in lexicographic order. This list should contain the following information about all processes :
+        </p>
+        <ul>
+          <li>Command Name</li>
+          <li>pid</li>
+          <li>state : running or stopped</li>
+        </ul>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> activities
+221 : emacs new.txt - Running
+430 : vim - Stopped
+620 : gedit - Stopped
+</code></pre>
+          </div>
+        </div>
+        <p>Format of an entry should be : <strong>[pid] : [command name] - [State]</strong></p>
+        <h3 id="specification-13--signals-12"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-13--signals-12"
+            class="anchor-heading" aria-labelledby="specification-13--signals-12"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 13 : Signals [12]</h3>
+        <p><strong>ping &lt;pid&gt; &lt;signal_number&gt;</strong></p>
+        <p>ping command is used to send signals to processes. Take the pid of a process and send a signal to it which
+          corresponds to the signal number (which is provided as an argument). Print error “No such process found”, if
+          process with given pid does not exist. You should take signal number’s modulo with 32 before checking which
+          signal it belongs to (assuming x86/ARM machine). Check man page for signal for an exhaustive list of all
+          signals present.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> activities
+221 : emacs new.txt - Running
+430 : vim - Stopped
+620 : gedit - Stopped
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> ping 221 9             # 9 is for SIGKILL
+Sent signal 9 to process with pid 221
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> activities
+430 : vim - Stopped
+620 : gedit - Stopped
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> ping 430 41
+Sent signal 9 to process with pid 430
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> activities
+620 : gedit - Stopped
+</code></pre>
+          </div>
+        </div>
+        <p>Following 3 commands are direct keyboard input where Ctrl is Control key on keyboard (or it’s equivalent).
+        </p>
+        <p><strong>Ctrl - C</strong></p>
+        <p>Interrupt any currently running foreground process by sending it the SIGINT signal. It has no effect if no
+          foreground process is currently running.</p>
+        <p><strong>Ctrl - D</strong></p>
+        <p>Log out of your shell (after killing all processes) while having no effect on the actual terminal.</p>
+        <p><strong>Ctrl - Z</strong></p>
+        <p>Push the (if any) running foreground process to the background and change it’s state from “Running” to
+          “Stopped”. It has no effect on the shell if no foreground process is running.</p>
+        <h3 id="specification-14--fg-and-bg-8"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-14--fg-and-bg-8"
+            class="anchor-heading" aria-labelledby="specification-14--fg-and-bg-8"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 14 : fg and bg [8]</h3>
+        <p><strong>fg &lt;pid&gt;</strong></p>
+        <p>Brings the running or stopped background process with corresponding pid to foreground, handing it the control
+          of terminal. Print “No such process found”, if no process with given pid exists.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> activities
+620 : gedit - Stopped
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> fg 620
+# brings gedit [620] to foreground and change it's state to Running
+</code></pre>
+          </div>
+        </div>
+        <p><strong>bg &lt;pid&gt;</strong></p>
+        <p>Changes the state of a stopped background process to running (in the background). If a process with given pid
+          does not exist, print “No such process found” to the terminal.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> activities
+620 : gedit - Stopped
+<span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> bg 620
+# Changes [620] gedit's state to Running (in the background).
+</code></pre>
+          </div>
+        </div>
+        <h3 id="specification-15--neonate-8"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-15--neonate-8"
+            class="anchor-heading" aria-labelledby="specification-15--neonate-8"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 15 : Neonate [8]</h3>
+        <p>Command : <strong>neonate -n [time_arg]</strong></p>
+        <p>The command prints the Process-ID of the most recently created process on the system (you are not allowed to
+          use system programs), this pid will be printed every [time_arg] seconds until the key ‘x’ is pressed.</p>
+        <div class="language-jsx highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">&lt;</span><span class="nc">JohnDoe</span><span class="err">@</span><span class="na">SYS</span><span class="err">:~</span><span class="p">&gt;</span> neonate -n 4
+# A line containing the pid should be printed
+# every 4 seconds until the user 
+# presses the key: 'x'. 
+11810
+11811
+11811
+11812
+11813 # key 'x' is pressed at this moment terminating the printing
+</code></pre>
+          </div>
+        </div>
+        <p>The starter code for this specification can be found <a
+            href="https://gist.github.com/schlechter-afk/e4f6df2868ed0ba1d780747535c54d4e">here</a>. Please also note a
+          few things:</p>
+        <ol>
+          <li>By default , I/O of the teminal is line-buffered, i.e, input is guaranteed to be flushed/sent to your
+            program once a line is terminated.</li>
+          <li>termios.h, a POSIX-standard header file, allows you to get the tty into raw mode whereas it is generally
+            in cooked mode. Reading it’s documentation/man pages is suggested.</li>
+          <li>Getting the terminal into raw mode allows it to be such that at soon as a key is pressed, the input signal
+            is sent to your program, along with a lot of other default features like echoing being disabled.</li>
+        </ol>
+        <h2 id="part-c--networking"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#part-c--networking" class="anchor-heading"
+            aria-labelledby="part-c--networking"><svg viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Part C : Networking</h2>
+        <h3 id="specification-16--iman-12"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#specification-16--iman-12"
+            class="anchor-heading" aria-labelledby="specification-16--iman-12"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Specification 16 : iMan [12]</h3>
+        <p>iMan fetches man pages from the internet using sockets and outputs it to the terminal (stdout). In this case,
+          you are required to use the website : http://man.he.net/ to get the man pages.</p>
+        <p>You must implement it in the following manner:</p>
+        <ol>
+          <li>Do DNS resolution for man.he.net</li>
+          <li>Open a TCP socket to the IP address</li>
+          <li>Send a Get request to the website’s server</li>
+          <li>Read the body of the website</li>
+          <li>Close socket</li>
+        </ol>
+        <p>Libraries that could be used are:</p>
+        <ol>
+          <li>&lt;unistd.h&gt;</li>
+          <li>&lt;netdb.h&gt;</li>
+          <li>&lt;arpa/inet.h&gt;</li>
+        </ol>
+        <p>along with general libraries such as &lt;stdlib.h&gt;, &lt;string.h&gt;, &lt;stdio.h&gt; and so on. Relevent
+          functions will be discussed in the tutorial.</p>
+        <p><strong>iMan &lt;command_name&gt;</strong></p>
+        <p>&lt;command_name&gt; is the name of the man page that you want to fetch.</p>
+        <p>This should fetch the man page (<em>atleast</em> the name, synopsis and description of the command) for the
+          given command from http://man.he.net/. Print an error statement if the page does not exist.</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>&lt;JohnDoe@SYS:~&gt; iMan sleep
+NAME
+       sleep - delay for a specified amount of time
+
+SYNOPSIS
+       sleep NUMBER[SUFFIX]...
+       sleep OPTION
+
+DESCRIPTION
+       Pause for NUMBER seconds.  SUFFIX may be 's' for seconds (the default),
+       'm' for minutes, 'h' for hours or 'd' for days.  Unlike most  implemen-
+       tations  that require NUMBER be an integer, here NUMBER may be an arbi-
+       trary floating point number.  Given two or more  arguments,  pause  for
+       the amount of time specified by the sum of their values.
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+&lt;JohnDoe@SYS:~&gt; iMan invalid_command
+ERROR
+        No such command
+</code></pre>
+          </div>
+        </div>
+        <p>Outputs given above may be formatted in any manner as long as the information by the website is unaltered.
+        </p>
+        <h1 id="useful-commandsstructsfiles"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#useful-commandsstructsfiles"
+            class="anchor-heading" aria-labelledby="useful-commandsstructsfiles"><svg viewBox="0 0 16 16"
+              aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Useful commands/structs/files:</h1>
+        <p>uname, hostname, signal, waitpid, getpid, kill, execvp, strtok, fork, getopt, readdir, opendir, readdir,
+          closedir, getcwd, sleep, struct stat, struct dirent, <code
+            class="language-plaintext highlighter-rouge">/proc/interrupts</code>, fopen, chdir, getopt, pwd.h (to obtain
+          username), <code class="language-plaintext highlighter-rouge">/proc/loadavg</code>.</p>
+        <p>Also check out termios.h functions like tcgetattr(), tcsetattr() for terminal setting (raw mode/ cooked
+          mode).</p>
+        <p>Refer to <a href="https://man7.org/linux/man-pages/dir_all_by_section.html">man</a> pages on internet to
+          learn of all possible invocations/variants of these general commands. Pay specific attention to the various
+          data types used within these commands and explore the various header files needed to use these commands.</p>
+        <h1 id="guidelines"> <a href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#guidelines"
+            class="anchor-heading" aria-labelledby="guidelines"><svg viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Guidelines</h1>
+        <ol>
+          <li>The submission must be done in C. No other languages are allowed.</li>
+          <li>All C standard library functions are allowed unless explicitly mentioned. You can find the list of header
+            files in C standard library here : https://en.cppreference.com/w/c/header</li>
+          <li>Third party libraries are not allowed.</li>
+          <li>If there is an error while running a command, it <strong>should not cause the shell to crash</strong>.
+            Handle errors as they are mentioned in the Mini Project document. If an <strong>error is not mentioned here,
+              you should still handle it appropriately</strong>. Look at <code
+              class="language-plaintext highlighter-rouge">&lt;perror.h&gt;</code> for handling error routines.</li>
+          <li>Do error handling for both user defined and system commands.</li>
+          <li>Use specific color coding for error messages and prompts (You can choose the colors)</li>
+          <li>As mentioned in Input Requirements, there can be multiple random tabs and spaces, you should handle these
+            (and still run the entered command).</li>
+          <li>The user can execute other files from within the shell (including the shell). Your program must be able to
+            execute them or print error if it is unable to do so.</li>
+          <li>Use of popen, pclose and system() calls is not permitted.</li>
+          <li>Use the exec family of command to execute the system commands. Errors should be handled appropriately.
+          </li>
+          <li>You are not required to implement background functionality for user commands (commands implemented by you)
+            in this shell (warp, peek, seek, proclore etc.)</li>
+          <li>However, piping and redirection must work with both user and system commands.</li>
+          <li>Use signal handlers to handle signals when switching between foreground and background or when a
+            background process exits.</li>
+          <li>Your code MUST compile for any marks to be given. Use version control to save working versions of code
+            before messing around with it and write modular code.</li>
+          <li>Segmentation faults and other crashes while your shell is running will be penalized.</li>
+          <li>The symbols “&lt;, &gt;,&nbsp;», &amp;, ; , -" would always correspond to their special meaning and would
+            not appear otherwise, such as in inputs to echo etc.</li>
+          <li>You are expected to implement everything except Specification 6 without using execvp.</li>
+        </ol>
+        <h1 id="plagiarism-policy"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#plagiarism-policy" class="anchor-heading"
+            aria-labelledby="plagiarism-policy"><svg viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Plagiarism Policy</h1>
+        <p><strong>Do NOT take code from your seniors or batchmates as we will do extensively evaluation for any
+            plagiarism.</strong> Heavy Moss will be run against the previous few year’s submissions as well, and any
+          case of <strong>plagiarism will be punished heavily according to the course policy.</strong></p>
+        <p>There will be a viva conducted during manual evaluations, related to your code and the logic/concept involved
+          in it. You will get a penalty of up to 100% if you are unable to answer these questions regarding the working
+          of your code and the concept behind it.</p>
+        <p>Takeaway : Do not copy, it won’t get you marks but there is a high chance for it to get you trouble.</p>
+        <h1 id="submission-guidelines"> <a
+            href="https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1#submission-guidelines"
+            class="anchor-heading" aria-labelledby="submission-guidelines"><svg viewBox="0 0 16 16" aria-hidden="true">
+              <use xlink:href="#svg-link"></use>
+            </svg></a> Submission Guidelines</h1>
+        <ol>
+          <li>Make a <strong>makefile</strong> for compiling all your code (with appropriate flags and linker options).
+            This makefile is expected to generate an <strong>executable “a.out” on running the “make”</strong> command.
+            Executing a.out should start your shell.</li>
+          <li>Include a <a href="http://readme.md/">README.md</a> describing which file corresponds to what part and any
+            assumptions that you made. Any assumptions not written in README.md may not be considered during manual
+            evaluation.</li>
+          <li>Following is the expected directory structure for your submission :</li>
+        </ol>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>
+├── README.md
+├── makefile
+└── Other files and directories
+
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <footer>
+          <p class="text-small text-grey-dk-100 mb-0">Copyright © 2023 Karthik Vaidhyanathan. Distributed by an <a
+              href="https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt">MIT license.</a></p>
+        </footer>
+      </div>
+    </div>
+    <div class="search-overlay"></div>
+  </div>
+  <div id="app_root"><template shadowrootmode="open">
+      <div><!---->
+        <style>
+          @import url(chrome-extension://mcfncmgpoefggbpeloigfonenlmamgjf/assets/content.css);
+        </style>
+      </div>
+    </template></div>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
+    <style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style>
+    <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
+      data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}">
+    </div>
+  </template></grammarly-desktop-integration>
+
+</html>
