@@ -1,0 +1,6 @@
+ls
+sleep 100 
+sleep 100 &
+ls
+activities
+exit
