@@ -3,7 +3,7 @@
 ## Description
 
 Welcome to the Custom Shell project, Mini Project 1, where you will build your own shell. This shell implementation involves various features, system calls, and commands to provide a comprehensive user experience.
-To see Problem Statement open Problem_statement.html
+To see Problem Statement open Problem_statement.html OR go to `https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1`
 ### Part A: Basic System Calls
 
 #### Specification 1: Display Requirement
